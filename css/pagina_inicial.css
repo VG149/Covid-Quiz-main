@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+body {
+    background-image: url(../img/fundo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+}
+#titulo {
+    width:30vw;
+    animation: anima_titulo 1s infinite;
+}
+@keyframes anima_titulo {
+    0% {
+        transform: rotate(2.5deg);
+    }
+    30% {
+        transform: rotate(-1.5deg);
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+    50% {
+        transform: rotate(-1deg);
+    }
+    100% {
+        transform: rotate(2deg);
+    }
+    0% {
+        transform: rotate(2.5deg);
+    }
+}
+#nome {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 5vh;
+    width: 30vw;
+    background-color: rgba(255, 255, 255, 0.89);
+}
+#nome::placeholder {
+    font-size: 1.5rem;
+}
+button {
+    padding-bottom: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3.5vmin;
+    width: 30vw;
+    height: 5vw;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 5vh;
+    transition: all .2s;
+}
+button:hover {
+    transform: scale(1.02);
+    font-weight: bold;
+    filter: saturate(130%);
+}
+@media (max-width:450px){
+    button {
+        width: 50vw;
+        height: 15vw;
+        font-size: 6vmin;
+    }
+    #nome {
+        width: 55vw;
+        height: 5vh;
+    }
+    #titulo {
+        width: 60vw;
+    }
+}
+#comecar:disabled{
+    background-color: rgb(196, 87, 87);
+    color: #5c5c5c;
+}
+#comecar:disabled:hover {
+    transform: scale(1);
+    font-weight: initial;
+    filter: saturate(100%);
+}
+#comecar:enabled {
+    color: #000000;
+    background-color: rgb(199, 53, 53);
+}
+#instrucoes {
+    background-color: #0D8CDB;
+}
+#creditos {
+    background-color: #0D8CDB;
+}
